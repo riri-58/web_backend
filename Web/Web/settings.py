@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
-    'hr_app',
 
 ]
 
@@ -80,24 +79,12 @@ WSGI_APPLICATION = 'Web.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {},
-    'auth_db':{
-         'ENGINE': 'django.db.backends.sqlite3',
+    'default': {
+               'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
-    'hr_db':{
-         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'orcl',
-        'USER': 'hr',
-        'PASSWORD': 'hr',
-        'HOST': 'localhost',
-        'PORT': '1521',
     }
-}
-DATABASE_ROUTERS = [
-    'routers.routers.AuthRouter',
-    'routers.routers.HrDbRouter',
-    ]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
