@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 
 def sing_in(request):
-    return render(request, 'login/sinh_in.html')
+    return render(request, 'login/sing_in.html')
+    
+def log_in(request):
+    return render(request, 'login/log_in.html')
+    
 
 def home(request):
     return render(request, 'login/about.html')
