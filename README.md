@@ -1,3 +1,2 @@
 # web_backend
 backend
-https://2gis.kz/almaty/geo/70030076202243314/76.66460495442152,43.205677782052447
