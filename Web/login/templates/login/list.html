@@ -1,0 +1,37 @@
+{% block list %}
+
+<div class="nav1" style="width: 300px; border: 0">
+    <div class="profile1">
+        <!-- {% load static %} -->
+        <!-- <img src="{%static 'img.jpeg' %}" , alt="src"> -->
+
+        <h3 class="user_">{{ request.user.username }}</h3>
+    </div>
+    <div class="profile2">
+        <ul class="profile2_ul">
+
+            <li class="on1">
+                <a href="{% url 'account'%}" data-purpose="user_manage:edit-profile">
+                    Profile
+                    </a>
+            </li>
+            <li class="on1">
+                <a href="{% url 'learn'%}" data-purpose="user_manage:edit-account">Learning</a>
+            </li>
+            <li class="on1">
+                <a href="{% url 'liked' %}" data-purpose="user_manage:edit-account">Liked courses</a>
+            </li>
+
+            <li class="on1">
+                <a href="{% url 'liked' %}" data-purpose="user_manage:edit-account">Friend list</a>
+            </li>
+
+            {%if request.user.is_authenticated%}
+            <li class="on1">
+                <a href="{% url 'edit_profile' %}" data-purpose="user_manage:edit-account">Edit Profile</a>
+            </li>
+            {%endif%}
+        </ul>
+    </div>
+</div>
+{% endblock %}
