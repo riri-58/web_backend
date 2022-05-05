@@ -29,6 +29,10 @@ def blog_single(request):
 
 def contact(request):
     return render(request, 'login/contact.html')
+    
+def index(request):
+    return render(request, 'login/index.html')
+
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Page not found<h1>')

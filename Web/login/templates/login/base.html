@@ -35,19 +35,19 @@
 			  </div>
 			  <nav id="nav-menu-container">
 				<ul class="nav-menu">
-				  <li><a href="/home">Home</a></li>
-				  <li><a href="/home">About</a></li>
-				  <li><a href="/packages">Packages</a></li>
-				  <li><a href="/hotels">Hotels</a></li>
-				  <li><a href="/insurance">Insurance</a></li>
-				  <li><a href="/log_in">Log in</a></li>
+				  <li><a href="{% url 'index'%}">Home</a></li>
+				  <li><a href="{% url 'home'%}">About</a></li>
+				  <li><a href="{% url 'packages'%}">Packages</a></li>
+				  <li><a href="{% url 'hotels'%}">Hotels</a></li>
+				  <li><a href="{% url 'insurance'%}">Insurance</a></li>
+				  <li><a href="{% url 'log_in'%}">Log in</a></li>
 				  <li class="menu-has-children"><a href="">Blog</a>
 					<ul>
-					  <li><a href="/blog-home">Blog Home</a></li>
-					  <li><a href="/blog-single">Blog Single</a></li>
+					  <li><a href="{% url 'blog_home'%}">Blog Home</a></li>
+					  <li><a href="{% url 'blog_single'%}">Blog Single</a></li>
 					</ul>
 				  </li>				          					          		          
-				  <li><a href="contact">Contact</a></li>
+				  <li><a href="{% url 'contact'%}">Contact</a></li>
 				</ul>
 			  </nav>				      		  
 			</div>
