@@ -1,2 +1,5 @@
 
 Web/db.sqlite3
+*.py
+*.py
+*.html
