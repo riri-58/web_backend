@@ -1,20 +1,9 @@
-{% include 'login/base.html' %}
-
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'accounts.css' %}">
-</head>
-
+{% extends "login/base.html" %}
+{% load static %}
+{% block content %}
 <body>
     <div class="main">
-        {% include 'login/list.html' %} {% block mainpart %}
+        {% block mainpart %}
         <div class="nav2">
             <div class="navnav">
                 <div class="pr">

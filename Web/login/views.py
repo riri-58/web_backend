@@ -1,3 +1,4 @@
+from binascii import rledecode_hqx
 from django.db import connection
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
@@ -14,8 +15,7 @@ def log_in(request):
 def home(request):
     return render(request, 'login/about.html')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 def packages(request):
     return render(request, 'login/packages.html')
 
@@ -37,10 +37,9 @@ def contact(request):
 def index(request):
     return render(request, 'login/index.html')
 
-=======
->>>>>>> parent of 008a891 (Merge branch 'main' of https://github.com/riri-58/web_backend)
-=======
->>>>>>> parent of 008a891 (Merge branch 'main' of https://github.com/riri-58/web_backend)
+
+def account(request):
+    return render(request, 'login/account.html')
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Page not found<h1>')
