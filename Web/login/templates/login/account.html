@@ -1,30 +1,21 @@
 {% extends "login/base.html" %}
 {% load static %}
 {% block content %}
-<body>
-    <div class="main">
-        {% block mainpart %}
-        <div class="nav2">
-            <div class="navnav">
-                <div class="pr">
-                    <h1>Public profile</h1>
-                    <p>Add information about yourself</p>
-                </div>
-                <div class="profile3">
-                    <div class="in_g">
-                        <input type="text" name="name" value='{{ request.user.first_name }}' maxlength="64" placeholder="Имя" class="textinput textInput form-control" required="" id="id_name" disabled>
-                    </div>
-                    <div class="in_g">
-                        <input type="text" name="name" value='{{ request.user.last_name }}' maxlength="64" placeholder="Surname" class="textinput textInput form-control" required="" id="id_name" disabled>
-                    </div>
-
-                </div>
-                <!-- <div class="submit-row"> <input type="submit" name="submit" value="Сохранить" class="btn btn-primary " id="submit-id-submit">
-                </div> -->
-            </div>
+<section class="about-banner relative">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">				
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Account				
+                </h1>
+            </div>	
         </div>
     </div>
-    {% endblock %}
-</body>
+</section>
 
-</html>
+<section class="destinations-area section-gap">
+   
+
+</section>
+{% endblock %}

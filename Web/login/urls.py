@@ -2,6 +2,7 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
+    path('account', views.account, name='account'),
     path('home', views.home, name='home'),
     path('sign_in', views.sing_in, name='sign_in'),
     path('log_in', views.log_in, name='log_in'),
@@ -12,5 +13,5 @@ urlpatterns = [
     path('blog_home', views.blog_home, name='blog_home'),
     path('contact', views.contact, name='contact'),
     path('', views.index, name='index'),
-    path('account', views.account, name='account'),
+  
 ]

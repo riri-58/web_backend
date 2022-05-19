@@ -37,9 +37,9 @@ def contact(request):
 def index(request):
     return render(request, 'login/index.html')
 
-
 def account(request):
     return render(request, 'login/account.html')
+    
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Page not found<h1>')

@@ -1,53 +1,4 @@
-/******************************************************************
-Theme Name: Travel 
-Description: 
-Author: Colorlib
-Author URI: 
-Version: 1.0
-Created: 
-******************************************************************/
-/*------------------------------------------------------------------
 
-
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
-
-1.  Basic Styles
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
-2.  Elements
-3.  Menu Style 
-4.  Home Page Style
-5.  About Page Style
-6.  Department Page Style
-7.  Blog Page Style
-8.  Contact Page Style
-9.  Footer Style
-
--------------------------------------------------------------------*/
-/* =================================== */
-/*  Font Family and Colors Styles
-/* =================================== */
-/*
-
-$primary-font	: 'Poppins', sans-serif;
----------------------------------------------
-
-$primary-color	: #f8b600;
-$title-color	: #222222;
-$text-color		: #777777;
-
-$white			: #fff;
-$offwhite		: #f9f9ff;
-$black			: #222;
-
-*/
-/* =================================== */
-/*  Basic Style 
-/* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #f8b600;
@@ -60,33 +11,33 @@ $black			: #222;
 }
 
 ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
+ 
   color: #777777;
   font-weight: 300;
 }
 
 :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
+
   color: #777777;
   opacity: 1;
   font-weight: 300;
 }
 
 ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
+ 
   color: #777777;
   opacity: 1;
   font-weight: 300;
 }
 
 :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+
   color: #777777;
   font-weight: 300;
 }
 
 ::-ms-input-placeholder {
-  /* Microsoft Edge */
+
   color: #777777;
   font-weight: 300;
 }
@@ -206,15 +157,7 @@ td, th {
   border-radius: 0px;
 }
 
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 .clear::before, .clear::after {
   content: " ";
   display: table;
@@ -812,11 +755,6 @@ td, th {
   margin-left: 0;
   margin-right: 0;
 }
-
-/* =================================== */
-/*  Elements Page Styles
-/* =================================== */
-/*---------- Start Elements Page -------------*/
 .whole-wrap {
   background-color: #f9f9ff;
 }
@@ -887,8 +825,6 @@ td, th {
 .switch-wrap p {
   margin: 0;
 }
-
-/*---------- End Elements Page -------------*/
 .sample-text-area {
   background: #f9f9ff;
   padding: 100px 0 70px 0;
@@ -2034,12 +1970,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 20px;
 }
 
-/* =================================== */
-/*  Menu Styles
-/* =================================== */
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 .header-top {
   font-size: 12px;
   padding: 6px 0px;
@@ -2123,11 +2053,6 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled .main-menu {
   background: transparent;
 }
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
   margin: 0;
   padding: 0;
@@ -2165,7 +2090,7 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 180px;
 }
 
-/* Nav Menu Arrows */
+
 .sf-arrows .sf-with-ul {
   padding-right: 30px;
 }
@@ -2182,15 +2107,12 @@ h1, h2, h3, h4, h5, h6 {
 .sf-arrows ul .sf-with-ul:after {
   content: "\f105";
 }
-
-/* Nav Meu Container */
 @media (max-width: 768px) {
   #nav-menu-container {
     display: none;
   }
 }
 
-/* Nav Meu Styling */
 .nav-menu a {
   padding: 0 8px 0px 8px;
   text-decoration: none;
@@ -2239,7 +2161,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-/* Mobile Nav Toggle */
 #mobile-nav-toggle {
   float: right;
   z-index: 999;
@@ -2266,8 +2187,6 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-
-/* Mobile Nav Styling */
 #mobile-nav {
   position: fixed;
   top: 0;
@@ -2345,7 +2264,6 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* Mobile Nav body classes */
 body.mobile-nav-active {
   overflow: hidden;
 }
@@ -2358,9 +2276,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-/* =================================== */
-/*  Homepage Styles
-/* =================================== */
 .section-gap {
   padding: 120px 0;
 }
@@ -2481,7 +2396,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 10px;
 }
 
-/*-------- Start Banner Area ------------*/
 .banner-area {
   background: url(../img/hero-bg.jpg) center;
   background-size: cover;
@@ -2608,9 +2522,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-bottom: 50px;
   }
 }
-
-/*-------- End Banner Area ------------*/
-/*-------- start Popular-destination Area ------------*/
 .single-destination {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2684,9 +2595,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 30px;
   }
 }
-
-/*-------- end Popular-destination Area ------------*/
-/*-------- start price Area ------------*/
 .price-area {
   background: url(../img/price-bg.png);
   background-size: cover;
@@ -2731,9 +2639,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 30px;
   }
 }
-
-/*-------- end price Area ------------*/
-/*-------- start other-issue Area ------------*/
 .single-other-issue .thumb {
   overflow: hidden;
 }
@@ -2762,8 +2667,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: scale(1.08) rotate(-3deg);
 }
 
-/*-------- end other-issue Area ------------*/
-/*--------- start testimonial area  -------------*/
 .testimonial-area {
   background-color: #f9f9ff;
 }
@@ -2834,8 +2737,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
-/*--------- end testimonial area  -------------*/
-/*--------- start home-about area  -------------*/
 .home-about-area .home-about-left {
   padding-left: 20%;
 }
@@ -2898,8 +2799,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
 }
 
-/*--------- end home-about area  -------------*/
-/*--------- start recent-blog Area -------------*/
 .recent-blog-area .owl-dots {
   text-align: center;
   bottom: 5px;
@@ -2997,9 +2896,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 .recent-blog-area .single-recent-blog-post:hover .thumb img {
   transform: scale(1.05);
 }
-
-/*--------- end recent-blog Area -------------*/
-/*-------- Start Common Page Style   -------------*/
 .link-nav {
   margin-top: 10px;
   margin-bottom: 0px;
@@ -3041,12 +2937,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0px 10px;
   font-weight: 600;
 }
-
-/*-------- End Common Page Style   -------------*/
-/* =================================== */
-/*  About Page Styles
-/* =================================== */
-/*-------- start about-info Style  -------------*/
 .about-info-area .info-left img {
   width: 100%;
 }
@@ -3071,12 +2961,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about-info-area .info-right p {
   max-width: 450px;
 }
-
-/*-------- end about-info Style  -------------*/
-/* =================================== */
-/*  Packages Page Styles
-/* =================================== */
-/*-------- start hot-deal Style  -------------*/
 .hot-deal-area .owl-dots {
   text-align: center;
   bottom: 5px;
@@ -3151,9 +3035,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 2;
   transform: translate(-50%, -50%);
 }
-
-/*-------- start hot-deal Style  -------------*/
-/*-------- start destinations-area Style  -------------*/
 .destinations-area {
   background: #f9f9ff;
 }
@@ -3216,11 +3097,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 .destinations-area .star .checked {
   color: orange;
 }
-
-/*-------- end destinations-area Style  -------------*/
-/* =================================== */
-/*  Insurence Page Styles
-/* =================================== */
 .insurence-right h6, .insurence-left h6 {
   font-weight: 500;
 }
@@ -3261,10 +3137,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-/* =================================== */
-/*  Blog Styles
-/* =================================== */
-/*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
   background: url(../img/blog/blog-home-banner.jpg) bottom;
   background-size: cover;
@@ -3572,25 +3444,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f8b600;
 }
 
-.widget-wrap .search-widget ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #fff;
-}
-
-.widget-wrap .search-widget ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #fff;
-}
-
-.widget-wrap .search-widget :-ms-input-placeholder {
-  /* IE 10+ */
-  color: #fff;
-}
-
-.widget-wrap .search-widget :-moz-placeholder {
-  /* Firefox 18- */
-  color: #fff;
-}
 
 .widget-wrap .search-widget form.search-form button {
   float: left;
@@ -3777,29 +3630,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-color: #ccc;
 }
 
-.widget-wrap .newsletter-widget ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-size: 13px;
-  color: #ccc;
-}
 
-.widget-wrap .newsletter-widget ::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 13px;
-  color: #ccc;
-}
-
-.widget-wrap .newsletter-widget :-ms-input-placeholder {
-  /* IE 10+ */
-  font-size: 13px;
-  color: #ccc;
-}
-
-.widget-wrap .newsletter-widget :-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 13px;
-  color: #ccc;
-}
 
 .widget-wrap .newsletter-widget .text-bottom {
   margin-bottom: 0px;
@@ -3838,8 +3669,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #222;
 }
 
-/*============ End Blog Home Styles  =============*/
-/*============ Start Blog Single Styles  =============*/
 .single-post-area {
   padding-top: 80px;
   padding-bottom: 80px;

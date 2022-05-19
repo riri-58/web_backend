@@ -12,14 +12,10 @@ $(document).ready(function() {
     $(".fitscreen").css("height", fitscreen);
 
 
-    // ------- Datepicker  js --------//  
-
       $( function() {
         $( ".date-picker" ).datepicker();
       } );
 
-
-    //------- Niceselect  js --------//  
 
     if (document.getElementById("default-select")) {
         $('select').niceSelect();
@@ -30,8 +26,6 @@ $(document).ready(function() {
     if (document.getElementById("service-select")) {
         $('select').niceSelect();
     };    
-
-    //------- Lightbox  js --------//  
 
     $('.img-gal').magnificPopup({
         type: 'image',
@@ -48,7 +42,6 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 
-    //------- Superfish nav menu  js --------//  
 
     $('.nav-menu').superfish({
         animation: {
@@ -57,9 +50,6 @@ $(document).ready(function() {
         speed: 400
     });
 
-
-
-    //------- Owl Carusel  js --------//  
 
     $('.active-hot-deal-carusel').owlCarousel({
         items:1,
@@ -116,9 +106,6 @@ $(document).ready(function() {
                 }
             }
         }); 
-
-    //------- Mobile Nav  js --------//  
-
     if ($('#nav-menu-container').length) {
         var $mobile_nav = $('#nav-menu-container').clone().prop({
             id: 'mobile-nav'
@@ -157,9 +144,6 @@ $(document).ready(function() {
     } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
         $("#mobile-nav, #mobile-nav-toggle").hide();
     }
-
-    //------- Smooth Scroll  js --------//  
-
     $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -221,16 +205,12 @@ $(document).ready(function() {
 
 
     jQuery(document).ready(function($) {
-        // Get current path and find target link
         var path = window.location.pathname.split("/").pop();
-
-        // Account for home page with empty path
         if (path == '') {
             path = 'index.html';
         }
 
         var target = $('nav a[href="' + path + '"]');
-        // Add active class to target link
         target.addClass('menu-active');
     });
 
@@ -239,12 +219,6 @@ $(document).ready(function() {
             $('.menu-active').closest("ul").parentsUntil("a").addClass('parent-active');
         }
     });
-
-
-
-
-    //------- Header Scroll Class  js --------//  
-
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
@@ -253,143 +227,6 @@ $(document).ready(function() {
         }
     });
 
-    //------- Google Map  js --------//  
-
-    if (document.getElementById("map")) {
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            var mapOptions = {
-                zoom: 11,
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-                styles: [{
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#e9e9e9"
-                    }, {
-                        "lightness": 17
-                    }]
-                }, {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f5f5f5"
-                    }, {
-                        "lightness": 20
-                    }]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                        "color": "#ffffff"
-                    }, {
-                        "lightness": 17
-                    }]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#ffffff"
-                    }, {
-                        "lightness": 29
-                    }, {
-                        "weight": 0.2
-                    }]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#ffffff"
-                    }, {
-                        "lightness": 18
-                    }]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#ffffff"
-                    }, {
-                        "lightness": 16
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f5f5f5"
-                    }, {
-                        "lightness": 21
-                    }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dedede"
-                    }, {
-                        "lightness": 21
-                    }]
-                }, {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                        "visibility": "on"
-                    }, {
-                        "color": "#ffffff"
-                    }, {
-                        "lightness": 16
-                    }]
-                }, {
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "saturation": 36
-                    }, {
-                        "color": "#333333"
-                    }, {
-                        "lightness": 40
-                    }]
-                }, {
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f2f2f2"
-                    }, {
-                        "lightness": 19
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                        "color": "#fefefe"
-                    }, {
-                        "lightness": 20
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#fefefe"
-                    }, {
-                        "lightness": 17
-                    }, {
-                        "weight": 1.2
-                    }]
-                }]
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Snazzy!'
-            });
-        }
-    }
-
-    //------- Mailchimp js --------//  
 
     $(document).ready(function() {
         $('#mc_embed_signup').find('form').ajaxChimp();
