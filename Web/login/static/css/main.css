@@ -2277,6 +2277,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
+  
+  height: 500px;
   padding: 120px 0;
 }
 

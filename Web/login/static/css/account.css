@@ -1,0 +1,32 @@
+.section{
+    position: relative;
+width: 2120px;
+height: 640px;
+
+background: #FFFFFF;
+}
+.photo{
+    position: absolute;
+    width: 229px;
+    height: 265px;
+    left: 222px;
+    top: 390px;
+    
+    background: #C5C5C5;
+    border-radius: 12px;
+}
+.info{
+    position: absolute;
+width: 773px;
+height: 254px;
+left: 600px;
+top: 394px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+color: #000000;
+}
