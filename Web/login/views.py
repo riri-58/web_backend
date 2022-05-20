@@ -3,6 +3,8 @@ from django.db import connection
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
+from .models import *
+
 
 def sing_in(request):
     return render(request, 'login/sing_in.html')
@@ -38,6 +40,7 @@ def index(request):
     return render(request, 'login/index.html')
 
 def account(request):
+    post = login.objects.all()
     return render(request, 'login/account.html')
     
 

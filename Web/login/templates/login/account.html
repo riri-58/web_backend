@@ -16,12 +16,15 @@
 
 <div class="section"></div>
 
-   <div class="photo">
-
-   </div>
-
    <div class="info">
-       <p>Info</p>
+      <ul>
+          {% for p in post %}
+          <li>
+              <h2>{{p.title}}</h2>
+              <p>{{p.content}}</p>
+          </li>
+          {% endfor %}
+      </ul>
    </div>
 </div>
 {% endblock %}
