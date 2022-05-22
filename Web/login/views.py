@@ -33,7 +33,7 @@ def insurance(request):
 
 def blog_single(request):
     if request.method == 'POST':
-        form = commentForms(request.POST)
+        form = commentForms(request.POST)[:5]
         if form.is_valid():
             form.save()
             return redirect('blog_single')

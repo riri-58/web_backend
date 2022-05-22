@@ -17,18 +17,7 @@
 <div class="section01"></div>
 
    <div class="info">
-      <ul>
-    {% if post %}
-        {% for el in post %}
-          <li>
-              <h2>{{el.author}}</h2>
-              <p>{{el.comment}}</p>
-          </li>
-        {% endfor %}
-    {% else %}
-          <p>There are no comments here</p>
-    {% endif %}
-      </ul>
+     
    </div>
 </div>
 {% endblock %}

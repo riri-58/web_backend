@@ -1,4 +1,6 @@
 from distutils.command.upload import upload
+import email
+from email import message
 
 from django.db import models
 
@@ -33,3 +35,8 @@ class pacage(models.Model):
 
 class basket(models.Model):
     S_NAME = models.CharField(max_length=255)
+
+class contact(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=254)
+    messege = models.TextField(blank=True)
