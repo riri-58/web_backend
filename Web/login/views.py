@@ -4,7 +4,6 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render
 
 from .forms import commentForms
-
 from .models import *
 
 
@@ -43,11 +42,11 @@ def blog_single(request):
 
     com = comment.objects.order_by('author')
     form = commentForms()
-
-    data = {
-        'form': form
+    context = {
+        'form': form,
+        'com':com
     }
-    return render(request, 'login/blog-single.html', {'com':com})
+    return render(request, 'login/blog-single.html', context)
 
 def contact(request):
     return render(request, 'login/contact.html')
