@@ -3971,10 +3971,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+.com{
+  text-align: center;
+  border: 1px solid #eee;
+  margin-top: 50px;
+}
+
 .comments-area {
   background: #fafaff;
   border: 1px solid #eee;
-  padding: 50px 20px;
+  padding: 0px 20px;
   margin-top: 50px;
 }
 

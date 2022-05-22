@@ -1,7 +1,9 @@
 from binascii import rledecode_hqx
 from django.db import connection
 from django.http import HttpResponse, HttpResponseNotFound
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+
+from .forms import commentForms
 
 from .models import *
 
@@ -31,7 +33,21 @@ def insurance(request):
     return render(request, 'login/insurance.html')
 
 def blog_single(request):
-    return render(request, 'login/blog-single.html')
+    if request.method == 'POST':
+        form = commentForms(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('blog_single')
+        else:
+           error = "Incorrect form"
+
+    com = comment.objects.order_by('author')
+    form = commentForms()
+
+    data = {
+        'form': form
+    }
+    return render(request, 'login/blog-single.html', {'com':com})
 
 def contact(request):
     return render(request, 'login/contact.html')
@@ -40,8 +56,7 @@ def index(request):
     return render(request, 'login/index.html')
 
 def account(request):
-    post = comment.objects.all()
-    return render(request, 'login/account.html', {'post':post})
+    return render(request, 'login/account.html')
     
 
 def pageNotFound(request, exception):
