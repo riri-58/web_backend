@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import login
+from .models import basket, comment, login, pacage
 
 admin.site.register(login)
+
+admin.site.register(comment),
+admin.site.register(basket),
+admin.site.register(pacage)

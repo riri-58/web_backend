@@ -40,8 +40,8 @@ def index(request):
     return render(request, 'login/index.html')
 
 def account(request):
-    post = login.objects.all()
-    return render(request, 'login/account.html')
+    post = comment.objects.all()
+    return render(request, 'login/account.html', {'post':post})
     
 
 def pageNotFound(request, exception):

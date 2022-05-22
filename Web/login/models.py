@@ -1,5 +1,7 @@
 from distutils.command.upload import upload
+
 from django.db import models
+
 
 class login(models.Model):
     title = models.CharField(max_length=255)
@@ -16,9 +18,12 @@ class comment(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
-
-def __str__(self):
-    return self.author
+    
+    def __str__(self):
+        return self.author
+    class Meta:
+        verbose_name = 'Comment'
+        verbose_name_plural = 'Comments'
 
 
 class pacage(models.Model):
