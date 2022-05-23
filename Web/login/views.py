@@ -1,9 +1,10 @@
 from binascii import rledecode_hqx
+from multiprocessing import context
 from django.db import connection
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render
 
-from .forms import commentForms
+from .forms import commentForms, contactForms
 from .models import *
 
 
@@ -33,7 +34,7 @@ def insurance(request):
 
 def blog_single(request):
     if request.method == 'POST':
-        form = commentForms(request.POST)[:5]
+        form = commentForms(request.POST)
         if form.is_valid():
             form.save()
             return redirect('blog_single')
@@ -49,7 +50,14 @@ def blog_single(request):
     return render(request, 'login/blog-single.html', context)
 
 def contact(request):
-    return render(request, 'login/contact.html')
+    if request.method == "POST":
+        contact_form = contactForms(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            return redirect('contact')
+    
+    return render(request, 'login/contact.html', {"form": contact_form})
+
     
 def index(request):
     return render(request, 'login/index.html')
